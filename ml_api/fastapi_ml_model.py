@@ -4,7 +4,7 @@ import joblib
 import numpy as np
 import pandas as pd
 
-# app = FastAPI()
+app = FastAPI()
 
 # Load the pre-trained linear regression model
 # model_path = "pretrained_model.pkl"
