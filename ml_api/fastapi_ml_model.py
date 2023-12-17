@@ -10,7 +10,7 @@ app = FastAPI()
 # model_path = "pretrained_model.pkl"
 # model = joblib.load(model_path)
 
-dataset = pd.read_csv('Salary_Data.csv')
+dataset = pd.read_csv('./Salary_Data.csv')
 X = dataset.iloc[:, :-1].values #get a copy of dataset exclude last column
 y = dataset.iloc[:, 1].values #get array of dataset in column 1st
 
