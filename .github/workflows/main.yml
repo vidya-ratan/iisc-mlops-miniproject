@@ -32,6 +32,7 @@ jobs:
         run: |
           # Add commands to deploy your FastAPI application
           # For example: 
-          uvicorn fastapi_ml_model:app --host 0.0.0.0 --port 8000
+          uvicorn ml_api.fastapi_ml_model:app --host 0.0.0.0 --port 8000
+
 
 # Add more steps as needed for additional testing or deployment tasks
