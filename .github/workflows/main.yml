@@ -1,0 +1,37 @@
+name: Model Testing and Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run model tests
+        run: |
+          # Add commands to run your model tests
+          # For example: pytest tests/
+
+      - name: Deploy to production
+        run: |
+          # Add commands to deploy your FastAPI application
+          # For example: 
+          uvicorn fastapi_ml_model:app --host 0.0.0.0 --port 8000
+
+# Add more steps as needed for additional testing or deployment tasks
